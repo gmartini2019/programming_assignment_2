@@ -33,7 +33,7 @@ def fit_kmeans(dataset, n_clusters):
     data, labels = dataset
     scaler = StandardScaler()
     data_standardized = scaler.fit_transform(data)
-    kmeans = KMeans(n_clusters=n_clusters, init="random", random_state=42)
+    kmeans = KMeans(n_clusters=n_clusters, init="random", random_state=12)
     kmeans.fit(data_standardized)
     kmeans_predictions = kmeans.predict(data_standardized)
     return kmeans_predictions
@@ -42,7 +42,7 @@ def fit_kmeans_random_init(data_label_pair, n_clusters):
     data, _ = data_label_pair  
     scaler = StandardScaler()
     data_standardized = scaler.fit_transform(data)
-    kmeans = KMeans(n_clusters=n_clusters, init='random', random_state=None)
+    kmeans = KMeans(n_clusters=n_clusters, init='random', random_state=12)
     kmeans.fit(data_standardized)
     return kmeans.predict(data_standardized)
 
