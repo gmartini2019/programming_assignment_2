@@ -76,7 +76,7 @@ def compute():
 
     answers = {"1A: datasets": datasets_dict}
 
-    dct = answers["1A: datasets"] = {}
+    dct = answers["1A: datasets"] = datasets_dict
 
     """
    B. Write a function called fit_kmeans that takes dataset (before any processing on it), i.e., pair of (data, label) Numpy arrays, and the number of clusters as arguments, and returns the predicted labels from k-means clustering. Use the init='random' argument and make sure to standardize the data (see StandardScaler transform), prior to fitting the KMeans estimator. This is the function you will use in the following questions. 
@@ -106,7 +106,7 @@ def compute():
 
     plt.tight_layout()
 
-    plt.savefig("/home/gmartini2019/DATA_MINING/kmeans_clustering_plots.pdf")
+    #plt.savefig("/home/gmartini2019/DATA_MINING/kmeans_clustering_plots.pdf")
     plt.close()
 
     # dct value: return a dictionary of one or more abbreviated dataset names (zero or more elements) 
@@ -152,7 +152,7 @@ def compute():
 
     plt.tight_layout()
 
-    plt.savefig("/home/gmartini2019/DATA_MINING/kmeans_clustering_plots_part_D.pdf")
+    #plt.savefig("/home/gmartini2019/DATA_MINING/kmeans_clustering_plots_part_D.pdf")
     plt.close()
 
     dct = answers["1D: datasets sensitive to initialization"] = ["nc", "nm", "bvv", "add"]
