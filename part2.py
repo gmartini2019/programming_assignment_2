@@ -68,6 +68,7 @@ def compute():
 
     # dct: return value from the make_blobs function in sklearn, expressed as a list of three numpy arrays
     data= make_blobs(center_box=(-20, 20), n_samples=20, centers=5, random_state=12, return_centers=True)
+
     answers["2A: blob"] = list(data)
     """
     B. Modify the fit_kmeans function to return the SSE (see Equations 8.1 and 8.2 in the book).
@@ -82,8 +83,8 @@ def compute():
     k_values = range(1, 9)
     sse_values = []
     for k in k_values:
-        sse = fit_kmeans_inertia([data, labels], k)  
-        sse_values.append((k, sse))
+        sse = fit_kmeans_inertia([data[0], data[1]], k)  
+        sse_values.append([k, sse])
     plt.figure(figsize=(10, 6))
     plt.plot([k for k, _ in sse_values], [sse for _, sse in sse_values], marker='o')
     plt.title('SSE as a function of k')
@@ -102,7 +103,7 @@ def compute():
     k_values = range(1, 9)
     sse_values_inertia = []
     for k in k_values:
-        sse = fit_kmeans_inertia([data, labels], k)  
+        sse = fit_kmeans_inertia([data[0], data[1]], k)  
         sse_values_inertia.append((k, sse))
     plt.figure(figsize=(10, 6))
     plt.plot([k for k, _ in sse_values_inertia], [sse for _, sse in sse_values_inertia], marker='o')
