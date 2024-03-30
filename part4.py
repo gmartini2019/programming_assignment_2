@@ -14,7 +14,7 @@ from scipy.cluster.hierarchy import dendrogram, linkage  #
 import math
 from sklearn.cluster import AgglomerativeClustering
 import pickle
-import utils as u
+#import utils as u
 from scipy.cluster.hierarchy import fcluster
 
 """
@@ -111,7 +111,7 @@ def compute():
                 axes[i, j].set_ylabel(f'Linkage: {linkage}')
 
     plt.tight_layout()
-    pdf_file_path = '/home/gmartini2019/DATA_MINING/hierarchical_clustering_plots.pdf'
+    pdf_file_path = 'hierarchical_clustering_plots.pdf'
     plt.savefig(pdf_file_path)
     plt.close()
     # dct value: list of dataset abbreviations (see 1.C)
@@ -131,7 +131,7 @@ def compute():
         axes[j].set_title(dataset_name)
 
     plt.tight_layout()
-    pdf_filename_with_cutoff = "/home/gmartini2019/DATA_MINING/hierarchical_clustering_with_cutoff_plots.pdf"
+    pdf_filename_with_cutoff = "hierarchical_clustering_with_cutoff_plots.pdf"
     plt.savefig(pdf_filename_with_cutoff)
     plt.close()
 
