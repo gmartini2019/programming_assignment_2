@@ -136,7 +136,7 @@ def compute():
     plt.close()
 
     # dct is the function described above in 4.C
-    dct = answers["4A: modified function"] = fit_modified
+    dct = answers["4C: modified function"] = fit_modified
 
     return answers
 
