@@ -1,9 +1,15 @@
+
+# import plotly.figure_factory as ff
 import pickle
+
+import myplots as myplt
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import make_blobs
 from sklearn.preprocessing import StandardScaler
+
 from sklearn.cluster import KMeans
+import math
 import pickle
 from sklearn.metrics import pairwise_distances
 
