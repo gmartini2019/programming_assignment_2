@@ -70,13 +70,13 @@ def compute():
 
     # dct: return value from the make_blobs function in sklearn, expressed as a list of three numpy arrays
     data, labels, centers = make_blobs(center_box=(-20, 20), n_samples=20, centers=5, random_state=12, return_centers=True)
-    dct = answers["2A: blob"] = [data, labels, centers]
+    answers["2A: blob"] = [data, labels, centers]
     """
     B. Modify the fit_kmeans function to return the SSE (see Equations 8.1 and 8.2 in the book).
     """
 
     # dct value: the `fit_kmeans` function
-    dct = answers["2B: fit_kmeans"] = fit_kmeans
+    answers["2B: fit_kmeans"] = fit_kmeans
 
     """
     C.	Plot the SSE as a function of k for k=1,2,….,8, and choose the optimal k based on the elbow method.
@@ -96,7 +96,7 @@ def compute():
 
     # dct value: a list of tuples, e.g., [[0, 100.], [1, 200.]]
     # Each tuple is a (k, SSE) pair
-    dct = answers["2C: SSE plot"] = sse_values
+    answers["2C: SSE plot"] = sse_values
 
     """
     D.	Repeat part 2.C for inertia (note this is an attribute in the kmeans estimator called _inertia). Do the optimal k’s agree?
@@ -115,10 +115,10 @@ def compute():
     plt.show()
 
     # dct value has the same structure as in 2C
-    dct = answers["2D: inertia plot"] = sse_values_inertia
+    answers["2D: inertia plot"] = sse_values_inertia
 
     # dct value should be a string, e.g., "yes" or "no"
-    dct = answers["2D: do ks agree?"] = "yes"
+    answers["2D: do ks agree?"] = "yes"
 
     return answers
 
