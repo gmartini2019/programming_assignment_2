@@ -4,7 +4,6 @@ from pprint import pprint
 import math
 from sklearn.cluster import AgglomerativeClustering
 import pickle
-import utils as u
 
 #import myplots as myplt
 import time
@@ -23,7 +22,6 @@ from sklearn.cluster import KMeans
 import math
 from sklearn.cluster import AgglomerativeClustering
 import pickle
-import utils as u
 from sklearn.metrics import pairwise_distances
 
 
