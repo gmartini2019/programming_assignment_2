@@ -1,26 +1,9 @@
-from pprint import pprint
-
-# import plotly.figure_factory as ff
-import math
-from sklearn.cluster import AgglomerativeClustering
 import pickle
-
-#import myplots as myplt
-import time
-import warnings
 import numpy as np
 import matplotlib.pyplot as plt
-from sklearn import cluster, datasets, mixture
 from sklearn.datasets import make_blobs
-from sklearn.neighbors import kneighbors_graph
 from sklearn.preprocessing import StandardScaler
-from itertools import cycle, islice
-import scipy.io as io
-from scipy.cluster.hierarchy import dendrogram, linkage  #
 from sklearn.cluster import KMeans
-# import plotly.figure_factory as ff
-import math
-from sklearn.cluster import AgglomerativeClustering
 import pickle
 from sklearn.metrics import pairwise_distances
 
