@@ -93,7 +93,7 @@ def compute():
     sse_values_inertia = []
     for k in k_values:
         sse = fit_kmeans_inertia([data[0], data[1]], k)  
-        sse_values_inertia.append((k, sse))
+        sse_values_inertia.append([k, sse])
     plt.figure(figsize=(10, 6))
     plt.plot([k for k, _ in sse_values_inertia], [sse for _, sse in sse_values_inertia], marker='o')
     plt.title('INERTIA as a function of k')
