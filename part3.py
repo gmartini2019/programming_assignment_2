@@ -41,7 +41,7 @@ def compute():
     """
     A.	Load the provided dataset “hierachal_toy_data.mat” using the scipy.io.loadmat function.
     """
-    dataset = io.loadmat('/home/gmartini2019/DATA_MINING/PROGRAMMING_ASSIGNMENT_2/CAP-5771-s24-assignment-2/hierarchical_toy_data.mat')
+    dataset = io.loadmat('hierarchical_toy_data.mat')
     # return value of scipy.io.loadmat()
     answers["3A: toy data"] = dataset
 
@@ -56,7 +56,7 @@ def compute():
     plt.title('Dendrogram with Single Linkage')
     plt.xlabel('Data Points')
     plt.ylabel('Euclidean Distance')
-
+    plt.savefig('dendogram.pdf')
     plt.show()
     # Answer: NDArray
     answers["3B: linkage"] = data_matrix
