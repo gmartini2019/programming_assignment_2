@@ -28,8 +28,8 @@ Recall from lecture that agglomerative hierarchical clustering is a greedy itera
 
 
 def data_index_function(data, I, J):
-    points_I = data[np.array(I)]
-    points_J = data[np.array(J)]
+    points_I = data[list(I), :]
+    points_J = data[list(J), :]
     distances = np.sqrt(((points_I[:, np.newaxis, :] - points_J[np.newaxis, :, :]) ** 2).sum(axis=2))
     dissimilarity = np.min(distances)
     return dissimilarity
@@ -71,7 +71,7 @@ def compute():
     """
 
     # Answer type: integer
-    answers["3C: iteration"] = 8
+    answers["3C: iteration"] =4
 
     """
     D.	Write a function that takes the data and the two index sets {I,J} above, and returns the dissimilarity given by single link clustering using the Euclidian distance metric. The function should output the same value as the 3rd column of the row found in problem 2.C.
@@ -85,7 +85,7 @@ def compute():
     """
 
     # List the clusters. the [{0,1,2}, {3,4}, {5}, {6}, ...] represents a list of lists.
-    answers["3E: clusters"] = [{0}, {3}, {7}, {10}, {11}, {12}, {1, 2, 4, 5, 6, 8, 9, 13, 14}]
+    answers["3E: clusters"] = [{2,13}, {8,2,13}, {1,9}, {6,14}, {4,6,14}, {8,2,13,1,9}, {8,2,13,1,9,4,6,14}, {5}, {11}, {0}, {10}, {3}, {7}, {12}]
 
     """
     F.	Single linked clustering is often criticized as producing clusters where “the rich get richer”, that is, where one cluster is continuously merging with all available points. Does your dendrogram illustrate this phenomenon?
